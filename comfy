@@ -1,0 +1,104 @@
+{
+  "1": {
+    "inputs": {
+      "image": "input.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "hf_token": "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",
+      "load_8bit": false,
+      "cpu_offload": false
+    },
+    "class_type": "EasyControlLoadFlux",
+    "_meta": {
+      "title": "Load EasyControl Flux Model"
+    }
+  },
+  "3": {
+    "inputs": {
+      "url": "https://huggingface.co/spaces/jamesliu1217/EasyControl_Ghibli/resolve/main/models/Ghibli.safetensors",
+      "lora_weight": 1,
+      "cond_size": 512,
+      "transformer": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "EasyControlLoadLoraFromURL",
+    "_meta": {
+      "title": "Load EasyControl Lora From URL"
+    }
+  },
+  "4": {
+    "inputs": {
+      "prompt": "Ghibli Studio style, Charming hand-drawn anime-style illustration",
+      "prompt_2": "",
+      "height": [
+        "6",
+        2
+      ],
+      "width": [
+        "6",
+        1
+      ],
+      "guidance_scale": 2.5,
+      "num_inference_steps": 15,
+      "seed": 772851803779658,
+      "cond_size": 512,
+      "use_zero_init": false,
+      "zero_steps": 1,
+      "pipe": [
+        "2",
+        0
+      ],
+      "transformer": [
+        "3",
+        0
+      ],
+      "spatial_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "EasyControlGenerate",
+    "_meta": {
+      "title": "EasyControl Generate"
+    }
+  },
+  "5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 768,
+      "height": 768,
+      "interpolation": "nearest",
+      "method": "keep proportion",
+      "condition": "always",
+      "multiple_of": 8,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  }
+}
