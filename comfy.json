@@ -10,7 +10,7 @@
   },
   "2": {
     "inputs": {
-      "hf_token": "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",
+      "hf_token": "__HF_TOKEN__",
       "load_8bit": false,
       "cpu_offload": false
     },
