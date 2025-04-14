@@ -21,7 +21,7 @@
   },
   "3": {
     "inputs": {
-      "url": "https://drive.google.com/uc?export=download&id=1L9_U7H4fIr2qwd9_U9SNLMvt9vde6bcg",
+      "url": "https://huggingface.co/spaces/jamesliu1217/EasyControl_Ghibli/resolve/main/models/Ghibli.safetensors",
       "lora_weight": 1,
       "cond_size": 512,
       "transformer": [
