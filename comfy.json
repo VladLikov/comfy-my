@@ -21,7 +21,7 @@
   },
   "3": {
     "inputs": {
-      "url": "https://huggingface.co/spaces/jamesliu1217/EasyControl_Ghibli/resolve/main/models/Ghibli.safetensors",
+      "url": "https://huggingface.co/VladLikov/comfy-my/resolve/main/Ghibli.safetensors",
       "lora_weight": 1,
       "cond_size": 512,
       "transformer": [
